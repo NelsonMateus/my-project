@@ -1,7 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import InteractiveMap from './components/InteractiveMap';
 
-const root = ReactDOM.createRoot(document.getElementById('map-root'));
-root.render(<InteractiveMap />);
+const rootElement = document.getElementById('map-root');
 
+if (rootElement) {
+    const root = createRoot(rootElement);
+    root.render(<InteractiveMap />);
+}
