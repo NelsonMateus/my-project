@@ -8,4 +8,12 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    esbuild: {
+        loader: {
+            '.js': 'jsx', // Forçar todos os arquivos .js a serem tratados como JSX
+        },
+        include: /resources\/js\/.*\.js$/, // Apenas arquivos na pasta js
+    },
 });
+
+
